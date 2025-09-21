@@ -1,0 +1,31 @@
+name: Terraform Validate
+on:
+  pull_request:
+  push:
+    branches: [ "main" ]
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hashicorp/setup-terraform@v3
+        with: { terraform_version: 1.7.5 }
+      - name: terraform fmt
+        run: terraform fmt -recursive -check
+      - name: terraform validate (envs/dev)
+        working-directory: ./envs/dev
+        run: |
+          terraform init -backend=false
+          terraform validate
+      - name: tflint
+        uses: reviewdog/action-tflint@v2
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          reporter: github-pr-review
+          filter_mode: nofilter
+          fail_on_error: true
+      - name: tfsec
+        uses: aquasecurity/tfsec-action@v1.0.5
+        with:
+          working_directory: .
+          soft_fail: false
