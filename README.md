@@ -1,5 +1,5 @@
 # Brian AI Assistant - Azure Infrastructure
-
+![Terraform Validate](https://github.com/sat0ps/terraform-azure-brian/actions/workflows/validate.yml/badge.svg)
 
 [![Terraform](https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white)](https://terraform.io/)
 [![Azure](https://img.shields.io/badge/azure-%230072C6.svg?style=for-the-badge&logo=microsoftazure&logoColor=white)](https://azure.microsoft.com/)
