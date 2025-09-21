@@ -1,6 +1,6 @@
 # Brian AI Assistant - Azure Infrastructure
 
-[![Deploy to Azure](https://github.com/sat0ps/terraform-azure-brian/workflows/Deploy%20Brian%20AI%20to%20Azure/badge.svg)](https://github.com/sat0ps/terraform-azure-brian/actions)
+
 [![Terraform](https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white)](https://terraform.io/)
 [![Azure](https://img.shields.io/badge/azure-%230072C6.svg?style=for-the-badge&logo=microsoftazure&logoColor=white)](https://azure.microsoft.com/)
 [![Kubernetes](https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white)](https://kubernetes.io/)
