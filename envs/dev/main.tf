@@ -1,6 +1,4 @@
-terraform { required_version = ">= 1.6.0" }
-# Temporary to pass validate; replace with your real env wiring.
 terraform {
-  required_providers { null = { source = "hashicorp/null" } }
+  required_version = ">= 1.6.0"
 }
-resource "null_resource" "dev_placeholder" {}
+# Placeholder env — no providers/resources so CI can validate without internet.
